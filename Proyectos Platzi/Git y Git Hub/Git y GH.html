@@ -1,95 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso Profesional de Git y GitHub</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Curso Profesional de Git y GitHub de PLATZI</h1>
+
+    <h3>Comandos base</h3>
 
     <h4>git init</h4>
     <p>Inicia una BBDD local en la carpeta</p>
-    <h4>git add 'nombre del archivo'</h4>
+    <h4>git add + 'nombre del archivo'</h4>
     <p>Agrega un archivo a la BBDD local</p>
-    <h4>git add .</h4>
-    <p>Agrega TODOS los archivos que no estan en ignore y se encuentren en la BBDD local</p>
-    <h4>git commit -m 'mensaje de actualizacion'</h4>
-    <p>Commitea los cambios pendientes</p>
+    <h5>git add + .</h5>
+    <p>
+      Agrega TODOS los archivos que no estan en ignore y se encuentren en la
+      BBDD local
+    </p>
+    <h4>git --help</h4>
+    <p>Devuelve una lista de comandos disponibles con git</p>
+    <h4>code 'nombre del archivo'</h4>
+    <p>Abre el editor de codigo</p>
+
+    <h3>Comandos de subida de archivos en local</h3>
+
+    <h4>git fetch</h4>
+    <p>Trae una actualizacion del repo al local sin copiarlo en los archivos</p>
+    <h4>git clone 'url repo'</h4>
+    <p>Clona el repo en local</p>
     <h4>git status</h4>
     <p>Muestra el estado de los cambios pendientes de commitear y demas</p>
+    <h4>git commit -am 'mensaje de actualizacion'</h4>
+    <p>Commitea los cambios pendientes</p>
+
+    <h3>Comando de subida de archivos al repo virtual</h3>
+
+    <h4>git remote add origin 'url HTTPS'</h4>
+    <p>Crea el repo remoto</p>
+    <h4>git pull</h4>
+    <p>Trae el archivo desde un repo</p>
+    <h4>git pull 'nombre repo local' 'rama de recepcion'</h4>
+    <p>Trae el repo remoto al local pisandolo</p>
+    <h4>
+      git pull 'nombre repo local' 'rama de recepcion'
+      --allow-unrelated-histories
+    </h4>
+    <p>Fuerza el merch</p>
+    <h4>git push</h4>
+    <p>Envia archivos al repo virtual</p>
+    <h4>git merge</h4>
+    <p>Fuciona la ultima version del repo con el local</p>
+    <h4>
+      git merge 'nombre de la branch' desde la branch donde queremos funcionar
+    </h4>
+    <p>
+      Actualiza el contenido de la branch invocada (nombrada en comado) a la que
+      me encuentro actualmente
+    </p>
+
+    <h3>Logs e historiales</h3>
 
     <h4>git show</h4>
     <p>Muestra los cambios historicos hechos en el contenido de los archivos</p>
     <h4>git log 'nombre del archivo'</h4>
     <p>Muerta toda la historia de un archvo</p>
-    <h4>--stat</h4>
+    <h5>--stat</h5>
     <p>Muestra los cambios espeficicos</p>
-    <h4>git push</h4>
-    <p>Envia 'cosas' al repo virtual</p>
-    <h4>git pull</h4>
-    <p>Trae el archivo desde un repo</p>
+    <h4>git diff 'hash commit mas antiguio' 'hash commit mas reciente'</h4>
+    <p>Compara los cambios de un commit a otro</p>
+    <h4>git log --all --graph --decorate --online</h4>
+    <p>Muestra el log completo de forma comprimita y con grafica clara</p>
+    <h4>git k</h4>
+    <p>
+      Abre un programa para ver la historia de las ramas en un entorno visual
+    </p>
+
+    <h3>Resets y marchas atras</h3>
+
+    <h4>git reset 'codigo commit version' --hard</h4>
+    <p>Nos devuelve a una version anterior segun el cod. commit indicado</p>
+    <h4>git reset 'codigo commit version' --soft</h4>
+    <p>
+      Nos devuelve a una version anterior segun el cod. commit indicado
+      guardando los cambios que estan en staging
+    </p>
+    <h4>git checkout 'codigo de commit'/rama 'nombre del archivo'</h4>
+    <p>
+      Devuelve un archivo a un estadio anterior o posterior segun el cod. commit
+    </p>
+    <h4>git reset HEAD</h4>
+    <p>Este es el comando para sacar archivos del área de staging</p>
+
+    <h3>Eliminar</h3>
 
     <h4>git rm --cached 'nombre del archivo'</h4>
-    <p>Elimina los archivos de nuestro repositorio local y del área de staging, pero los mantiene en nuestro disco duro</p>
+    <p>
+      Elimina los archivos de nuestro repositorio local y del área de staging,
+      pero los mantiene en nuestro disco duro
+    </p>
     <h4>git rm --force 'nombre del archivo'</h4>
-    <p>Elimina los archivos de nuestro repositorio local, del área de staging y de nuestro disco duro</p>
+    <p>
+      Elimina los archivos de nuestro repositorio local, del área de staging y
+      de nuestro disco duro
+    </p>
+
+    <h3>Configuraciones</h3>
+
     <h4>git config</h4>
     <p>Configuraciones generales</p>
     <h4>git config --list</h4>
     <p>Configuracion por defecto</p>
     <h4>git config --list --show-'nombre repo local'</h4>
     <p>Muestra donde estan guardadas las configuraciones</p>
-
     <h4>git config --global user.????</h4>
     <p>Configuracion global de usuarios</p>
     <h4>git config --global --replace-all user.????</h4>
     <p>Modifica el dato user</p>
     <h4>git config --global --unset-all user.????</h4>
     <p>Elimina el dato user</p>
-    <h4>code 'nombre del archivo'</h4>
-    <p>Abre el editor de codigo</p>
-    <h4>git diff 'hash commit mas antiguio' 'hash commit mas reciente'</h4>
-    <p>Compara los cambios de un commit a otro</p>
 
-    <h4>git --help</h4>
-    <p>Devuelve una lista de comandos disponibles con git</p>
-    <h4>git reset 'codigo commit version' --hard</h4>
-    <p>Nos devuelve a una version anterior segun el cod. commit indicado</p>
-    <h4>git reset 'codigo commit version' --soft</h4>
-    <p>Nos devuelve a una version anterior segun el cod. commit indicado guardando los cambios que estan en staging</p>
-    <h4>git checkout 'codigo de commit'/rama 'nombre del archivo'</h4>
-    <p>Devuelve un archivo a un estadio anterior o posterior segun el cod. commit</p>
-    <h4>git reset HEAD</h4>
-    <p>Este es el comando para sacar archivos del área de staging</p>
-    
-    <h4>git clone 'url repo'</h4>
-    <p>Clona el repo en local</p>
-    <h4>git push</h4>
-    <p>Envia las cosas al repositorio</p>
-    <h4>git fetch</h4>
-    <p>Trae una actualizacion del repo al local sin copiarlo en los archivos</p>
-    <h4>git merge</h4>
-    <p>Fuciona la ultima version del repo con el local</p>
-    <h4>git pull</h4>
-    <p>Hace un fetch y un merge</p>
+    <h3>Branches</h3>
 
+    <h4>git branch</h4>
+    <p>Muestra el listado de las branch y marca la actual</p>
     <h4>git branch nombre_del_branch</h4>
     <p>Crea una nueva branch</p>
-    <h4>git branch </h4>
-    <p>Muestra el listado de las branch y marca la actual</p>
     <h4>git checkout 'nombre de la branch'</h4>
     <p>cambia de rama</p>
-    <h4> git remote add origin 'url HTTPS'</h4>
-    <p>Crea el repo remoto</p>
+    <h4>git branch -m 'nuevo nombre'</h4>
+    <p>Cambia el nombre de la rama actual</p>
     <h4>git push origin 'nombre de la branch'</h4>
-    <p>Pushea los cambios al repo generando una nueva branch en caso de que el origen no exista en el repo</p>
+    <p>
+      Pushea los cambios al repo generando una nueva branch en caso de que el
+      origen no exista en el repo
+    </p>
+    <h4>git branch -d header</h4>
+    <p>Borra una rama</p>
+    <h4>git show-branch --all</h4>
+    <p>Nos muestra la historia de las ramas</p>
 
-    <h4>git pull 'nombre repo local' 'rama de recepcion'</h4>
-    <p>Trae el repo remoto al local pisandolo</p>
-    <h4>git pull 'nombre repo local' 'rama de recepcion' --allow-unrelated-histories</h4>
-    <p>Fuerza el merch</p>
+    <h3>SSH</h3>
+
     <h4>ssh-keygen -t rsa -b 4096 -C 'email'</h4>
     <p>genera una llave SSH</p>
     <h4>$ eval $(ssh-agent -s)</h4>
@@ -97,25 +151,25 @@
     <h4>ssh-add ~/.ssh/id_rsa</h4>
     <p>Agrega la llave</p>
 
+    <h3>Remoto</h3>
+
     <h4>git remote -v</h4>
     <p>Nos devuelve las URL asociadas a los repos</p>
-
     <h4>git remote set-url 'nombre repo local' 'SHH key'</h4>
     <p>Cambia la URL del repo local por otro o la SSH en este caso</p>
-
-    <h4>git branch -m 'nuevo nombre'</h4>
-    <p>Cambia el nombre de la rama actual</p>
     <h4>git remote rm 'nombre de la referencia'</h4>
     <p>Borra una referencia</p>
-    <h4>git branch -d header</h4>
-    <p>Borra una rama</p>
-    <h4>git log --all --graph --decorate --online</h4>
-    <p>Muestra el log completo de forma comprimita y con grafica clara</p>
+
+    <h3>Alias y tags</h3>
+
     <h4>alias 'nombre del alias' = 'comando'</h4>
     <p>Genera un alias para un comando</p>
 
     <h4>git tag -a nombre_del_tag -m 'mensaje' 'hash'</h4>
-    <p>Crea una etiqueta para el hash indicado. hash = codigo alfanumerico del log</p>
+    <p>
+      Crea una etiqueta para el hash indicado. hash = codigo alfanumerico del
+      log
+    </p>
     <h4>git tag</h4>
     <p>Muestra la lista de tags</p>
     <h4>git show-ref --tags</h4>
@@ -124,20 +178,28 @@
     <p>Pushea los tags</p>
     <h4>git tag -d 'nombre del tag'</h4>
     <p>Borra el tag de forma local</p>
-
     <h4>git push origin :refs/tags/'nombre del tag'</h4>
     <p>Borra el tag en GitHub</p>
-    <h4>git show-branch --all</h4>
-    <p>Nos muestra la historia de las ramas</p>
-    <h4>git k</h4>
-    <p>Abre un programa para ver la historia de las ramas en un entorno visual</p>
-    <h4>git merge 'nombre de la branch' desde la branch donde queremos funcionar</h4>
-    <p>Actualiza el contenido de la branch invocada (nombrada en comado) a la que me encuentro actualmente</p>
-    <h4></h4>
-    <p></p>
-    
-    <h4></h4>
-    <p></p>
 
-</body>
+    <h4>git rebase 'nombre de la branch'</h4>
+    <p>Realiza una merch silencioso que no deja informacion en el log. Se debe utilizar primero en la rama que se va a borrar
+    y despuesta en la main</p>
+
+    <h4>git stash</h4>
+    <p>Guarda los cambios de forma local sin la necesidad de tener que hacer un commit</p>
+    <h4>git stash list</h4>
+    <P>Me muestra las listas de los stash existentes</P>
+    <h4>git stash pop</h4>
+    <p>Trae los cambios hechos sobre el archivo abierto que se encuentran en un stash</p>
+    <h4>git stash branch 'nombre de la branch'</h4>
+    <p>Pasa el stash a una branch nueva</p>
+    <h4>git stash drop</h4>
+    <p>Borra el stash</p>
+
+    <h4>git clean --dry--run</h4>
+    <p>Muestra la lista de archivos no commiteados a borrar</p>
+    <h4>git clean -f</h4>
+    <p>Borra los archivos no commiteados que no se encuentren dentro del gitingnore, no borra carpetas</p>
+
+  </body>
 </html>
