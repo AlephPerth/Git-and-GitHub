@@ -133,10 +133,8 @@
     <h4>git branch -m 'nuevo nombre'</h4>
     <p>Cambia el nombre de la rama actual</p>
     <h4>git push origin 'nombre de la branch'</h4>
-    <p>
-      Pushea los cambios al repo generando una nueva branch en caso de que el
-      origen no exista en el repo
-    </p>
+    <p>Pushea los cambios al repo generando una nueva branch en caso de que el
+    origen no exista en el repo</p>
     <h4>git branch -d header</h4>
     <p>Borra una rama</p>
     <h4>git show-branch --all</h4>
@@ -166,10 +164,7 @@
     <p>Genera un alias para un comando</p>
 
     <h4>git tag -a nombre_del_tag -m 'mensaje' 'hash'</h4>
-    <p>
-      Crea una etiqueta para el hash indicado. hash = codigo alfanumerico del
-      log
-    </p>
+    <p>Crea una etiqueta para el hash indicado. hash = codigo alfanumerico del log</p>
     <h4>git tag</h4>
     <p>Muestra la lista de tags</p>
     <h4>git show-ref --tags</h4>
@@ -182,8 +177,7 @@
     <p>Borra el tag en GitHub</p>
 
     <h4>git rebase 'nombre de la branch'</h4>
-    <p>Realiza una merch silencioso que no deja informacion en el log. Se debe utilizar primero en la rama que se va a borrar
-    y despuesta en la main</p>
+    <p>Realiza una merch silencioso que no deja informacion en el log. Se debe utilizar primero en la rama que se va a borrar y despuesta en la main</p>
 
     <h4>git stash</h4>
     <p>Guarda los cambios de forma local sin la necesidad de tener que hacer un commit</p>
@@ -200,6 +194,24 @@
     <p>Muestra la lista de archivos no commiteados a borrar</p>
     <h4>git clean -f</h4>
     <p>Borra los archivos no commiteados que no se encuentren dentro del gitingnore, no borra carpetas</p>
+
+    <h4>git cherry-pick hash</h4>
+    <p>Trae un commit de otra rama sin traer los posteriores o anteriores al mismo</p>
+
+    <h4>git reflog</h4>
+    <p>Guarda el historial completo de cambios, incluso aquellos que fueron borrados</p>
+
+    <h4>git reset HEAD {N}</h4>
+    <p>Vuelve a traer el repo a donde estaba anteriormente, no borra lo que hay en el stashing
+    Los cambios realizados devuelven hasta antes del commit pero para volver a la version anterior
+    plena se debe sacar del estado de commit lo que haya alli.</p>
+    
+    <h4>git reset --HRAD hash</h4>
+    <p>Vuelve a traer el repo a donde estaba anteriormente y borra lo que hay en el stashing
+    Los cambios realizados vuelven hasta el punto previo al commit</p>
+
+    <h4>git --amend</h4>
+    <p>Agrega al commit anterior los cambios hechos sin necesidad de volver a commitear</p>
 
   </body>
 </html>
