@@ -24,6 +24,8 @@
     <p>Devuelve una lista de comandos disponibles con git</p>
     <h4>code 'nombre del archivo'</h4>
     <p>Abre el editor de codigo</p>
+    <h4>git 'comando' --help</h4>
+    <p>Muestra el manual de ayuda sobre el comando</p>
 
     <h3>Comandos de subida de archivos en local</h3>
 
@@ -74,9 +76,9 @@
     <h4>git log --all --graph --decorate --online</h4>
     <p>Muestra el log completo de forma comprimita y con grafica clara</p>
     <h4>git k</h4>
-    <p>
-      Abre un programa para ver la historia de las ramas en un entorno visual
-    </p>
+    <p>Abre un programa para ver la historia de las ramas en un entorno visual</p>
+    <h4>git log -S 'palabra buscada'</h4>
+    <p>Busca la palabra en el log de commits</p>
 
     <h3>Resets y marchas atras</h3>
 
@@ -139,6 +141,10 @@
     <p>Borra una rama</p>
     <h4>git show-branch --all</h4>
     <p>Nos muestra la historia de las ramas</p>
+    <h4>-r</h4>
+    <p>Muestra las ramas del repo remoto</p>
+    <h4>-a</h4>
+    <p>Muestra todas las ramas (locales y remotas)</p>
 
     <h3>SSH</h3>
 
@@ -162,6 +168,8 @@
 
     <h4>alias 'nombre del alias' = 'comando'</h4>
     <p>Genera un alias para un comando</p>
+    <h4>git config --global alias.nombre_del_alias 'comando'</h4>
+    <p>Crea un alias global</p>
 
     <h4>git tag -a nombre_del_tag -m 'mensaje' 'hash'</h4>
     <p>Crea una etiqueta para el hash indicado. hash = codigo alfanumerico del log</p>
@@ -212,6 +220,31 @@
 
     <h4>git --amend</h4>
     <p>Agrega al commit anterior los cambios hechos sin necesidad de volver a commitear</p>
+
+    <h4>git grep 'palabra buscada o etiqueta'</h4>
+    <p>Busca dentro del archivo</p>
+    <h4>-n</h4>
+    <p>Devuelve la palabra buscada y en que lineas y archivo aparece</p>
+    <h4>-c</h4>
+    <p>Cuenta cuantas veces se uso la palabra o etiqueta</p>
+
+    <h4>git shortlog</h4>
+    <p>Muestra los commits hechos por los diferentes miembros</p>
+    <h4>-sn</h4>
+    <p>Muestra en "formato tabla" el numero de commits hechos por los diferente miembros</p>
+    <h4>--all</h4>
+    <p>p>Muestra en "formato tabla" el numero de commits hechos por los diferente miembros, incluyendo los borrados</p>
+    <h4>--no-merge</h4>
+    <p>p>Muestra en "formato tabla" el numero de commits hechos por los diferente miembros, sin incluir los merges</p>
+
+    <h4>git blame 'nombre del archivo'</h4>
+    <p>Muestra quien hizo que linea por linea</p>
+    <h4>git blane 'nombre/ruta del archivo' -L 'numero de lina inicial', 'numero de linea final'</h4>
+    <p>Muestra quien modifico que de las lineas citadas</p>
+    <h4>-c</h4>
+    <p>Identa mejor el comando</p>
+
+
 
   </body>
 </html>
