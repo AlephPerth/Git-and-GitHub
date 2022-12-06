@@ -1,0 +1,64 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --text-input-field: #F7F7F7;
+    --black: #000000;
+    --hospital-green: #ACD982;
+    --sm: 14px;
+    --md: 16px; 
+    --lg: 18px;
+}
+
+body { 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.movile-menu {
+    padding: 24px;
+}
+
+.movile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0 0;
+}
+
+.movile-menu .second {
+    margin-top: 65px;
+}
+
+.movile-menu .third {
+    margin-top: 93px;
+}
+
+.movile-menu li {
+    margin-bottom: 24px;
+}
+
+.sign-out li {
+    margin-bottom: 4px;
+}
+
+.email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+
+.Sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+}
+
+.movile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.movile-menu a:hover {
+    color: var(--hospital-green)
+}
+
